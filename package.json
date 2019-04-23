@@ -8,5 +8,14 @@
     "start": "node server.js"
   },
   "author": "Tanj McMeans",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TMcMeans/test-server.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/TMcMeans/test-server/issues"
+  },
+  "homepage": "https://github.com/TMcMeans/test-server#readme"
 }
