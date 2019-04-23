@@ -34,7 +34,6 @@ This app was created as a mini-project to demonstrate my ability to write well-c
 - Mocha
 - Chai
 - Chai HTTP
-- Travis CI
 - Heroku (deployment)
 
 ## 📥 How To Contribute

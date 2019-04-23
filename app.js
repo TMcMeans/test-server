@@ -1,7 +1,6 @@
-// It only needs to accept a POST request to the route “/test” which accepts one argument “string_to_cut” returns a JSON object with the key “return_string” and a string containing every third letter from the original string. E.g. if you POST {"string_to_cut": "iamyourlyftdriver"}, it will return: {"return_string": "muydv"}.] To see expected behavior you can test against a current working example with the command: curl -X POST https://lyft-interview-test.herokuapp.com/test --data '{"string_to_cut": "iamyourlyftdriver"}' -H 'Content-Type: application/json'
-
 const bodyParser = require('body-parser');
 const express = require('express');
+
 //Initialize express server
 const app = express();
 
@@ -9,11 +8,11 @@ const app = express();
 app.set('port', process.env.PORT || 3000);
 app.locals.title = 'Test Server';
 
-//Use bodyParser middleware to parse incoming requests to application/json
+//Use bodyParser middleware to parse incoming requests to application/json format
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-//A method for returning a new string with every 3rd char from the argument string included
+//A method for returning a obj with a filtered string- with every 3rd char from the argument string included
 const cutThisString = str => {
   let filteredStr = '';
   let chars = str.split('');
@@ -24,13 +23,14 @@ const cutThisString = str => {
   return { return_string: filteredStr };
 };
 
-//POST handler accepts a string as the request body, calls the cutThisString method upon successful acceptance and sends a modified string as a response
+//POST handler accepts a string as the request body, calls the cutThisString method upon successful acceptance and sends a filtered string as a response
 app.post('/test', (req, res) => {
   const { string_to_cut } = req.body;
-  if (string_to_cut) {
-    //Send modified string back as a response
+
+  if (string_to_cut && typeof string_to_cut === 'string') {
     res.json(cutThisString(string_to_cut));
   } else {
+    //Send a 400 status error message if string_to_cut is missing or incomplete
     res.status(400).send({
       error: 'You are missing data! Expected format: {string_to_cut: <string> }'
     });
