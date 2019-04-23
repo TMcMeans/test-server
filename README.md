@@ -1,6 +1,6 @@
 # Test Server
 
-Test server is a basic app that makes accepts POST requests to the route "/test" which accepts one argument “string_to_cut” and returns a JSON object with the key “return_string” and a string containing every third letter from the original string.
+Test server is a basic app that makes accepts POST requests to the route "/test" which accepts one argument {"string_to_cut": "string goes here"} and returns a JSON object with the key “return_string” and a string containing every third letter from the original string.
 
 ## ⚙️ Initial Setup
 
@@ -21,7 +21,7 @@ npm test
 
 ## Features
 
-The server accepts POST requests to the route "/test" which accepts one argument “string_to_cut” and returns a JSON object with the key “return_string” and a string containing every third letter from the original string. For example, if you POST {"string_to_cut": "iamyourlyftdriver"}, it will return {"return_string": "muydv"}.
+The server accepts POST requests to the route "/test" which accepts one argument “string_to_cut” and returns a JSON object with the key “return_string” and a string containing every third letter from the original string. For example, if you POST {"string_to_cut": "happybirthdaymom"}, it will return {"return_string": "pbtao"}.
 
 ## Future Iterations
 
