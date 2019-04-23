@@ -1,0 +1,12 @@
+{
+  "name": "test-server",
+  "version": "1.0.0",
+  "description": "a small web application server",
+  "main": "server.js",
+  "scripts": {
+    "test": "npm test",
+    "start": "node server.js"
+  },
+  "author": "Tanj McMeans",
+  "license": "ISC"
+}
