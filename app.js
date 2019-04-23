@@ -15,15 +15,13 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 //A method for returning a new string with every 3rd char from the argument string included
 const cutThisString = str => {
-  let cutString = '';
+  let filteredStr = '';
   let chars = str.split('');
-  for (let i = 0; i < chars.length; i++) {
-    if (i % 3 === 0) {
-      cutString += chars[i];
-    }
+  for (let i = 2; i < chars.length; i += 3) {
+    filteredStr += chars[i];
   }
 
-  return { return_string: cutString };
+  return { return_string: filteredStr };
 };
 
 //POST handler accepts a string as the request body, calls the cutThisString method upon successful acceptance and sends a modified string as a response
