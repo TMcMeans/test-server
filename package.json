@@ -17,5 +17,12 @@
   "bugs": {
     "url": "https://github.com/TMcMeans/test-server/issues"
   },
-  "homepage": "https://github.com/TMcMeans/test-server#readme"
+  "homepage": "https://github.com/TMcMeans/test-server#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.11"
+  }
 }

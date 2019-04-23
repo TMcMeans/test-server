@@ -1,6 +1,6 @@
 # Test Server
 
-This test server is a basic app that makes accepts POST requests to the route "/test" which accepts one argument “string_to_cut” and returns a JSON object with the key “return_string” and a string containing every third letter from the original string.
+Test server is a basic app that makes accepts POST requests to the route "/test" which accepts one argument “string_to_cut” and returns a JSON object with the key “return_string” and a string containing every third letter from the original string.
 
 ## ⚙️ Initial Setup
 
