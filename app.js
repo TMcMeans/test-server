@@ -7,9 +7,14 @@ const app = express();
 app.set('port', process.env.PORT || 3000);
 app.locals.title = 'Test Server';
 
+app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+
+app.post('/test', (req, res) => {
+  const { string_to_cut } = req.body;
+});
 
 //Listen on PORT
 app.listen(app.get('port'), () => {
-  console.log(`${app.locals.title} is running on ${app.get('port')}`);
+  console.log(`${app.locals.title} is running on port ${app.get('port')}`);
 });
