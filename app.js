@@ -15,7 +15,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 //A method for returning a obj with a filtered string- with every 3rd char from the argument string included
 const cutThisString = str => {
   let filteredStr = '';
-  let chars = str.split('');
+  const chars = str.split('');
   for (let i = 2; i < chars.length; i += 3) {
     filteredStr += chars[i];
   }
@@ -32,7 +32,8 @@ app.post('/test', (req, res) => {
   } else {
     //Send a 400 status error message if string_to_cut is missing or incomplete
     res.status(400).send({
-      error: 'You are missing data! Expected format: {string_to_cut: <string> }'
+      error:
+        'You are missing data! Expected request body format: {string_to_cut: <string> }'
     });
   }
   res.end();
