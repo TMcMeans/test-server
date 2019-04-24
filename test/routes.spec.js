@@ -18,7 +18,7 @@ describe('/test', () => {
         res.should.have.status(200);
         res.body.should.be.a('object');
         res.body.should.have.a.property('return_string');
-        res.body.return_string.should.equal('1');
+        res.body.return_string.should.equal('pbtao');
         done();
       });
   });
