@@ -9,7 +9,7 @@ chai.use(chaiHttp);
 
 describe('/test', () => {
   //happy path tests that this route returns a modified string as a response to POST request
-  it('POST should send a return_string value', done => {
+  it('POST should send a return_string', done => {
     chai
       .request(app)
       .post('/test')
@@ -40,6 +40,7 @@ describe('/test', () => {
         done();
       });
   });
+
   it('POST should return a 400 error if string_to_cut is not a string', done => {
     chai
       .request(app)
