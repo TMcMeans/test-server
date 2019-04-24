@@ -1,6 +1,6 @@
 # Test Server
 
-Test server is a basic app that makes accepts POST requests to the route "/test" which accepts one argument {"string_to_cut": "string goes here"} and returns a JSON object with the key “return_string” and a string containing every third letter from the original string.
+Test server is a fully tested, basic app that makes accepts POST requests to the route "/test" which accepts one argument {"string_to_cut": "string goes here"} and returns a JSON object with the key “return_string” and a string containing every third letter from the original string.
 
 ## ⚙️ Initial Setup
 
@@ -34,7 +34,6 @@ This app was created as a mini-project to demonstrate my ability to write well-c
 - Mocha
 - Chai
 - Chai HTTP
-- Heroku (deployment)
 
 ## 📥 How To Contribute
 
